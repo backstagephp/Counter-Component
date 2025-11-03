@@ -10,6 +10,7 @@ class Counter extends Component
     {
         $this->count = Cache::get('counter', 0);
         $this->increment = $this->count + 1;
+        
         Cache::put('counter', $this->increment);
     }
 
