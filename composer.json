@@ -1,15 +1,12 @@
 {
-    "name": "backstage/laravel-component-template",
-    "description": "Laravel Dummy Component",
+    "name": "backstage/CounterComponent",
+    "description": "Laravel Counter Component",
     "keywords": [
         "backstage",
         "laravel",
-        "laravel-blade",
-        "laravel-blade-dummy",
-        "laravel-dummy",
-        "laravel-dummy-component"
+        "laravel-blade"
     ],
-    "homepage": "https://github.com/backstagephp/laravel-component-template",
+    "homepage": "https://github.com/backstagephp/Counter-Component",
     "license": "MIT",
     "authors": [
         {
@@ -48,7 +45,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Backstage\\Dummy\\": "src/"
+            "Backstage\\Counter\\": "src/"
         }
     },
     "scripts": {
@@ -68,7 +65,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Backstage\\Dummy\\DummyServiceProvider"
+                "Backstage\\Counter\\CounterServiceProvider"
             ]
         }
     },

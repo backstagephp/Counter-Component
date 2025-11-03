@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Dummy;
+namespace Backstage\Counter;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

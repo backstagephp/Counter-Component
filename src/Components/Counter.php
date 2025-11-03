@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Dummy\Components;
+namespace Backstage\Counter\Components;
 
 use Illuminate\View\Component;
 
