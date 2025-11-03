@@ -17,6 +17,7 @@ class ComponentsCommand extends Command
 
         if (empty($components)) {
             $this->warn('No components found');
+
             return Command::FAILURE;
         }
 
@@ -24,6 +25,7 @@ class ComponentsCommand extends Command
 
         if (! in_array($component, $components)) {
             $this->error("Component {$component} not found");
+
             return Command::FAILURE;
         }
 
@@ -45,7 +47,7 @@ class ComponentsCommand extends Command
                 $components[] = str_replace('backstage-components-', '', $key);
             }
         }
-        
+
         return $components;
     }
 }
