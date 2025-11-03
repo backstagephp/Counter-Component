@@ -1,5 +1,5 @@
 {
-    "name": "backstage/CounterComponent",
+    "name": "backstage/counter-component",
     "description": "Laravel Counter Component",
     "keywords": [
         "backstage",
