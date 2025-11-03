@@ -18,7 +18,7 @@ class DummyServiceProvider extends PackageServiceProvider
     {
         $this->publishes([
             $this->package->basePath('/../resources/dummy') => resource_path("vendor/{$this->package->shortName()}"),
-            $this->package->basePath('/../src/Components') => app_path("View/Components"),
+            $this->package->basePath('/../src/Components') => app_path('View/Components'),
         ], [
             "backstage-components-{$this->package->shortName()}",
         ]);

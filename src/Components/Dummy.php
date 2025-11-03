@@ -6,9 +6,7 @@ use Illuminate\View\Component;
 
 class Dummy extends Component
 {
-    public function __construct(public ?string $var)
-    {
-    }
+    public function __construct(public ?string $var) {}
 
     public function render()
     {
