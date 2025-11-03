@@ -1,8 +1,9 @@
 <?php
 
-namespace Backstage\Counter\Components;
+namespace App\View\Components;
 
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\Cache;
 
 class Counter extends Component
 {
@@ -16,6 +17,6 @@ class Counter extends Component
 
     public function render()
     {
-        return view('counter::counter.counter');
+        return view('components.counter');
     }
 }
