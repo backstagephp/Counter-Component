@@ -17,7 +17,7 @@ class CounterServiceProvider extends PackageServiceProvider
     public function boot()
     {
         $this->publishes([
-            $this->package->basePath('/../resources/counter') => resource_path("components/{$this->package->shortName()}"),
+            $this->package->basePath('/../resources/counter') => resource_path("views/components/{$this->package->shortName()}"),
             $this->package->basePath('/../src/Components') => app_path("View/Components"),
         ], [
             "backstage-components-{$this->package->shortName()}",
