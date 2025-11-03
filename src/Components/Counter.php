@@ -7,16 +7,18 @@ use Illuminate\Support\Facades\Cache;
 
 class Counter extends Component
 {
+    public $count;
+
     public function __construct()
     {
         $this->count = Cache::get('counter', 0);
-        $this->increment = $this->count + 1;
+        $this->count++;
         
-        Cache::put('counter', $this->increment);
+        Cache::put('counter', $this->count);
     }
 
     public function render()
     {
-        return view('components.counter');
+        return view('components.counter.counter');
     }
 }
