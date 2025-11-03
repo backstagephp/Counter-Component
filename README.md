@@ -23,3 +23,8 @@ php artisan backstage:component {component? : The component to use}
 ```bash
 git subtree add --prefix components/CounterComponent git@github.com:backstagephp/Counter-Component.git main --squash
 ```
+
+Push the component to the repository.
+```bash
+git subtree push --prefix components/CounterComponent git@github.com:backstagephp/Counter-Component.git main
+```
