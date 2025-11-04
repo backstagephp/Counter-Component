@@ -1,3 +1,0 @@
-[submodule "components/CounterComponent"]
-	path = components/CounterComponent
-	url = git@github.com:backstagephp/Counter-Component.git

@@ -23,28 +23,3 @@ php artisan backstage:component {component?}
 # Contributing
 
 If you made a website component follow these steps.
-
-**Add Repository as submodule**
-
-```bash
-git submodule add components/CounterComponent git@github.com:backstagephp/Counter-Component.git components/CounterComponent
-composer require backstage/counter-component
-```
-
-## Updating this repository
-
-To update all submodules
-```bash
-git submodule update --recursive --remote
-git add .
-git commit -m "Update submodules"
-git push
-```
-
-To update a single submodule directly
-```bash
-cd components/CounterComponent
-git add .
-git commit -m "wip"
-git push
-```
