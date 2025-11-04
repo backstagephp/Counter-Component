@@ -1,25 +1,19 @@
-# A collection of beautiful website components.
+# Counter component example
+A counter component example for Backstage.
 
-From the makers of Backstage.
+<img width="266" height="321" alt="afbeelding" src="https://github.com/user-attachments/assets/8824edb9-f40e-4818-9da3-4d072025f938" />
+
+For more information see [backstage/components](https://github.com/backstagephp/components).
 
 ## Installation
-If you using backstage/cms these components are including by default.
 
 ```bash
 composer require backstage/components
+php artisan backstage:component counter
 ```
 
-Add the following code to app.js.
-```js
-import.meta.glob('../views/components/**/*.css', { eager: true });
-import.meta.glob('../views/components/**/*.js', { eager: true });
+Add the following to your blade file.
+
+```blade
+<x-counter />
 ```
-
-Publishes a component
-```bash
-php artisan backstage:component {component?}
-```
-
-# Contributing
-
-If you made a website component follow these steps.

@@ -1,43 +1,59 @@
 {
-    "name": "backstage/components",
-    "description": "A collection of beautiful website components.",
+    "name": "backstage/counter-component",
+    "description": "Laravel Counter Component",
     "keywords": [
-        "Backstage",
+        "backstage",
         "laravel",
-        "components"
+        "laravel-blade"
     ],
-    "homepage": "https://github.com/backstagephp/components",
+    "homepage": "https://github.com/backstagephp/Counter-Component",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mathieu",
+            "name": "Mark van Eijk",
+            "email": "mark@vormkracht10.nl",
+            "role": "Developer"
+        },
+        {
+            "name": "Yoni van Haarlem",
+            "email": "yoni@vormkracht10.nl",
+            "role": "Developer"
+        },
+        {
+            "name": "Mathieu de Ruiter",
             "email": "mathieu@vormkracht10.nl",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.3",
-        "backstage/counter-component": "dev-main",
-        "illuminate/contracts": "^12.0",
-        "spatie/laravel-package-tools": "^1.16"
+        "illuminate/contracts": "^11.0||^12.0",
+        "spatie/laravel-package-tools": "^1.14.0",
+        "symfony/cache": "^7.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^8.0",
+        "larastan/larastan": "^2.9.0",
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-arch": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "Backstage\\Components\\": "src/",
-            "Backstage\\Components\\Database\\Factories\\": "database/factories/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Backstage\\Components\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Backstage\\Counter\\": "src/"
         }
     },
     "scripts": {
-        "build": [
-            "@composer run prepare"
-        ],
-        "prepare": "@php artisan package:discover --ansi"
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
@@ -49,13 +65,9 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Backstage\\Components\\ComponentsServiceProvider"
-            ],
-            "aliases": {
-                "Components": "Backstage\\Components\\Facades\\Components"
-            }
+                "Backstage\\Counter\\CounterServiceProvider"
+            ]
         }
     },
-    "minimum-stability": "dev",
     "prefer-stable": true
 }
